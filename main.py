@@ -1,5 +1,6 @@
 #Program to fetch real time weather and temperature in degree celcius from openweathermap.org using API.
 import requests
+import sys
 
 #Get your API key from https://openweathermap.org/api to get access to the data.
 api_key = input("Enter your API key: ")
@@ -19,5 +20,6 @@ if response.status_code == 200:
     print("Weather:", weather.capitalize())
     temperature = round(data["main"]["temp"] - 273.15, 2)
     print(f"Temperature: " + str(temperature) + "\N{DEGREE SIGN}" + " C")
-else:
-    print("An error occured!")
+    sys.exit(0)
+print("An error occured!")
+sys.exit(1)
