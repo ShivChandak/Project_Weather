@@ -11,7 +11,7 @@ city = input("Enter City: ")
 request_url = f"{BASE_URL}?appid={API_KEY}&q={city}"
 response = requests.get(request_url)
 
-#If the request is satisfied with code 200 (ok) then do the necessary. 'data' gets all the data from the jason file.
+#If the request is satisfied with code 200 (ok) then do the necessary. 'data' gets all the data from the json file.
 #data is trimmed to show what is required.
 if response.status_code == 200:
     data = response.json()
