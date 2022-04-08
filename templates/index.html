@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <header style="text-align:center; padding-top: 70px; padding-bottom: 30px">
+        <h1  class="display-1">WEATHER</h1>
+    </header>
+    <main>
+        <form style="padding-left:500px;" action="/result">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">API Key:</label>
+                </div>
+                <div class="col-auto">
+                  <input name="api_key" type="text" autofocus autocomplete="off" placeholder="API KEY" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    We do not save your API key.
+                  </span>
+                </div>
+              </div>
+            <div class="row g-3 align-items-center" style="padding-top: 15px;">
+                <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">City:   </label>
+                </div>
+                <div class="col-auto">
+                  <input name="city" autocomplete="off" placeholder="CITY" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Enter the name of the city only.
+                  </span>
+                </div>
+              </div>
+              <div style="padding-top: 20px; padding-left: 130px;">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+        </form>
+    </main>
+    <footer style="padding-top: 250px;">
+        copyright &#169; Shiv Chandak
+    </footer>
+
+{% endblock %}
