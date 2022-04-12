@@ -1,11 +1,16 @@
 {% extends "layout.html" %}
 
 {% block body %}
-
-    {% for answers in ans %}
-        <p>
-            {{ answers }}
-        </p>
-    {% endfor %}
+    <header style="text-align:center; padding-top: 70px; padding-bottom: 30px">
+        <h1  class="display-1">WEATHER</h1>
+    </header>
+    <main>
+        <p>Result:</p>
+        {% for answers in ans %}
+            <p>
+                {{ answers }}
+            </p>
+        {% endfor %}
+    </main>
 
 {% endblock %}
